@@ -23,7 +23,6 @@ export const AccordionItem = ({
   open,
 }: AccordionBaseComponentProps): React.JSX.Element => {
   const [isOpen, setOpen] = React.useState(open);
-
   const handleHeaderClick = () => {
     setOpen(!isOpen);
   };

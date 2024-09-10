@@ -22,6 +22,9 @@ export class Accordion extends AccordionDef {
   }
 
   evalExpressions(props: ExprResolver<'Accordion'>) {
-    return this.evalDefaultExpressions(props);
+    return {
+      ...this.evalDefaultExpressions(props),
+      openByDefault: props.evalBool(props.item.openByDefault, false),
+    };
   }
 }
